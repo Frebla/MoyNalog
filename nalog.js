@@ -1,7 +1,10 @@
-const nalog = new NalogAPI({autologin:false})
+const moyNalog = require('moy-nalog')
 
-nalog.auth('531004875086','VolgaSiber2010&')
+const nalogAPI = new moyNalog({ username:'531004875086', password: 'VolgaSiber2010&' })
 
-console.log(authPromise)
+nalogAPI.addIncome({ name:'Предоставление информационных услуг', amount: 99.99 }).then( receipt => {
+  console.log(receipt.id, receipt.data)
 
-console.log(authPromise)
+  // ссылка на картинку с чеком
+  return receipt.printUrl
+}).catch(console.error)
