@@ -1,4 +1,4 @@
-const nalog = NalogAPI({autologin:false})
+const nalog = new NalogAPI({autologin:false})
 
 nalog.auth('531004875086','VolgaSiber2010&')
 
