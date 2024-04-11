@@ -11,7 +11,7 @@ console.log('123')
 nalog.call('incomes', {
     from: new Date('2024-01-01 00:00'),
     to: new Date('2024-03-01 00:00')
-  }).then(response => {
+  }, 'GET').then(response => {
   console.log(response)
  return 
 }).catch(console.error)
