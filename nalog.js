@@ -8,9 +8,16 @@ nalog.auth('531004875086','VolgaSiber2010&')
 
 console.log('123')
 
-nalog.addIncome({ name:'Предоставление информационных услуг', amount: 99.99 }).then( receipt => {
-  console.log(receipt.id, receipt.data)
+  const response = await nalog.call('incomes', {
+    from: new Date('2024-01-01 00:00'),
+    to: new Date('2024-03-01 00:00')
+  }).catch(console.error)
+
+  console.log(response)
+
+//nalog.addIncome({ name:'Предоставление информационных услуг', amount: 99.99 }).then( receipt => {
+  //console.log(receipt.id, receipt.data)
 
   // ссылка на картинку с чеком
-  return receipt.printUrl
-}).catch(console.error)
+  //return receipt.printUrl
+//}).catch(console.error)
