@@ -4,7 +4,7 @@ const NalogAPI = require('moy-nalog')
 
 const nalog = new NalogAPI({autologin:false})
 
-nalog.auth('531004875086','VolgaSiber2010&')
+nalog.auth('531004875086','')
 
 console.log('123')
 
