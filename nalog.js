@@ -1,6 +1,6 @@
 const NalogAPI = require('moy-nalog')
 
-//const nalogAPI = new moyNalog({ username:'531004875086', password: 'VolgaSiber2010&' })
+//const nalogAPI = new moyNalog({ username:'531004875086', password: '' })
 
 const nalog = new NalogAPI({autologin:false})
 
